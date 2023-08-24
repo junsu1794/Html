@@ -23,7 +23,15 @@ header.on:before {width: 100%; }
 main {width: 100%;max-width: calc(100% - 200px);}
 
 /* quick */
-main .quick {position: fixed;right: 2rem;top: 2rem;width: 8.5rem;height: 22.5rem;background: var(--background);z-index: 55; }
+main .quick {position: fixed;right: 2rem;top: 2rem;width: 10.5rem;height: 22.5rem;background: #ebebeb;z-index: 55; padding: 2rem 2rem 1rem; display: flex; flex-direction: column; justify-content: space-evenly;}
+
+.quick li a{display: block; text-align: center;}
+.quick li a *{display: block;}
+.quick li a .icon{display: block; width: 3.2rem; height: 3.2rem; background: no-repeat center center/cover; margin: auto;}
+.quick li:nth-child(1) a .icon{background-image: url(../images/cart-icon.png);}
+.quick li:nth-child(2) a .icon{background-image: url(../images/chat-icon.png);}
+.quick li:nth-child(3) a .icon{background-image: url(../images/qustion-icon.png);}
+
 
 /* slide */
 main .slide {width: 100%;height: 400px; }
@@ -51,7 +59,7 @@ main .banner .inner .textbox{flex:0 1 57rem;}
 main .banner .inner .p{color: var(--text2); padding-top: 1rem;}
 
 
-
+/* board */
 main .board {width: 100%;height: 250px; padding: 1rem;}
 main .board .inner {width: 100%; max-width: 900px; margin: auto;}
 main .board .row {display: flex;}
@@ -66,14 +74,35 @@ main .board .panels::before {content: ''; position: absolute; width:calc(100% - 
 main .board .panels .row {justify-content: space-between;}
 main .board .panels .row div{padding: 0.8rem 4rem;}
 main .board h2{position: absolute; right: 50rem; width: 20rem; text-align: center; line-height: 1.25; color: #bcbcbc; padding: 1rem; font-size: 5rem;}
+
+main .board .panels .row .left{cursor: pointer;}
+main .board .panels .row .left:hover{text-decoration: underline;}
+
 .panel1, .panel2{position: absolute; height: 14rem; width: 100%;}
 .panel2 .row li{padding: 2rem;}
 .panel2 .row li img{width: 100%;}
 .panel2{display: none;}
 
+main .board .popup {position: fixed; z-index: 9999; width: 50rem; height: 30rem; background:#ffffff url(../images/popimg.png) no-repeat left bottom; top: 50%; left: 35%; display: none;}
+
+/* popup */
+main .popup .textbox{position: absolute; right: 5rem; top: 5rem;}
+.popup .textbox .h1{position: static; color: var(--primary); width: 100%; font-size: 2.5rem; text-align: left; padding: 0; margin-bottom: 2rem;}
+.popup .textbox p {padding: 0.25rem 0;}
+.popup .close{position: absolute; right: 1rem; top: 2rem;}
+
+.overlay{position: fixed; background: rgba(0,0,0,.5); left:0; right:0; top:0; bottom:0;z-index: 99; display: none;}
+
+.overlay.open{display: block;}
 
 
-footer {width: 100%;height: 120px;background-color: var(--primary); }
-
+/* footer */
+footer {width: 100%;height: 120px; text-align: center; align-items: center;}
+footer .logo{flex-basis: 200px;}
+footer .light{flex-basis: 80%;}
+footer .inner{max-width: 900px; margin: auto;}
+footer .inner .top{display: flex; justify-content: space-around; padding: 0 8rem;}
+footer .inner .top li{position: relative;}
+footer .inner .top li:not(:last-child)::before{position: absolute; content:''; background:var(--text2); width: 1px; height: 34%; right: -15%; top: 50%; transform:translateY(-40%);}
 
 

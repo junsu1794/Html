@@ -46,3 +46,17 @@ tabBtn.removeClass('on');
 panels.eq(tg).show();
 tabBtn.eq(tg).addClass('on');
 })
+
+/* popup */
+$('.open').on('click',function(e){
+e.preventDefault();
+// $('.popup').css('display','block');
+$('.popup').show();
+$('.overlay').addClass('open');
+}) 
+$('.close').on('click',function(e){
+	e.preventDefault();
+	// $('.popup').css('display','block');
+	$('.popup').hide();
+	$('.overlay').removeClass('open');
+	}) 
