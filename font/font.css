@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/* font-face */
+@font-face {
+    font-family: 'Maplestory';
+    src: url(/font/Maplestory\ OTF\ Bold.ttf);
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Maplestory';
+    src: url(/font/Maplestory\ OTF\ Light.ttf);
+    font-weight: 400;
+}

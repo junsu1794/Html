@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cf {
+            content: '';
+            clear: both;
+            display: block;
+        }
+
+        #container {
+            width: 530px;
+            height: 736px;
+            background: #fff;
+            position: relative;
+        }
+
+        .box1 {
+            width: 56px;
+            height: 34px;
+            background: #E9E9E9;
+            border-radius: 10px;
+            position: absolute;
+            top: 80px;
+            left: 20px;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        h2 {
+            color: #444;
+            width: 163px;
+            height: 32px;
+            /* border: 1px solid black; */
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 100%;
+            letter-spacing: -0.1px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        img {
+            float: left;
+            /* border: 1px solid black; */
+            width: 240px;
+            height: 270px;
+            border-radius: 20px;
+        }
+
+        .Bigbox,
+        .Bigbox2 {
+            width: 240px;
+            height: 350px;
+            /* border: 1px solid darkgrey;  */
+        }
+
+        .Bigbox {
+            position: absolute;
+            left: 20px;
+            top: 180px;
+            box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.20);
+            border-radius: 20px;
+
+        }
+
+        .Bigbox2 {
+            position: absolute;
+            left: 270px;
+            top: 180px;
+            box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.20);
+            border-radius: 20px;
+        }
+
+        .boxTop,
+        .boxBottom {
+            color: #000;
+            font-family: Pretendard;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        p {
+            margin-left: 30px;
+        }
+
+        .m1 {
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h2>My Gallery</h2>
+        <div class="box1">#동네</div>
+        <div class="cf">
+            <div class="Bigbox">
+                <div class="boxTop">
+                    <img src="./img/picture.png" alt="">
+                </div>
+                <div class="boxTop">
+                    <p class="m1">햄스터</p>
+                    <p class="m2">아무말 대잔치</p>
+                </div>
+            </div>
+            <div class="Bigbox2">
+                <div class="boxBottom">
+                    <img src="./img/picture2.png" alt="">
+                </div>
+                <div class="boxBottom">
+                    <p class="m1">토끼</p>
+                    <p class="m2">어려워</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

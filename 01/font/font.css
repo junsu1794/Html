@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'The_Jamsil';
+    src: url('./The\ Jamsil\ 5\ Bold.ttf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'The_Jamsil';
+    src: url(./The\ Jamsil\ 2\ Light.ttf);
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'The_Jamsil';
+    src: url(./The\ Jamsil\ 4\ Medium.ttf);
+    font-weight: 500;
+}

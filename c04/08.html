@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-clip</title>
+    <style>
+        div {
+            width: 500px;
+            padding: 25px;
+            margin-bottom: 15px;
+            border: 15px double;
+            background-color: bisque;
+
+        }
+
+        .clip1 {
+            background-clip: border-box;
+        }
+
+        .clip2 {
+            background-clip: padding-box;
+        }
+
+        .clip3 {
+            background-clip: content-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>background-clip</h1>
+    <!-- 배경영역지정 -->
+    <div class="clip1">It's impossible not only starting good but also keeping it firm!!</div>
+    <div class="clip2">It's impossible not only starting good but also keeping it firm!!</div>
+    <div class="clip3">It's impossible not only starting good but also keeping it firm!!</div>
+</body>
+</body>
+
+</html>

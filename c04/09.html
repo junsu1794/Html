@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>IMAGE SPRITE</title>
+    <style>
+        li {
+            list-style: none;
+            margin: 5px;
+        }
+
+        li a {
+            text-decoration: none;
+            font-family: 'Times New Roman', Times, serif;
+            color: #3c00ffde;
+            display: block;
+            background-color: #999;
+            padding-left: 30px;
+            background: #999 url(./img/bg_sprite.png) no-repeat;
+            /* background: image */
+            /* background: color */
+            /* background-repeat */
+            /* background-position */
+            /* background-attachment */
+            background-size: 26px;
+            font-size: 25px;
+        }
+        /* transition: all 0.5s; 슬로우로 위로 올라간다. */
+        .lnb li:nth-child(1) a {
+            transition: all 0.5s;
+            background-position: 0 0%;
+        }
+
+        .lnb li:nth-child(2) a {
+            transition: all 0.5s;
+            background-position: 0 -50px;
+        }
+
+        .lnb li:nth-child(3) a {
+            transition: all 0.5s;
+            background-position: 0 -100px;
+        }
+
+        .lnb li:nth-child(4) a {
+            transition: all 0.5s;
+            background-position: 0 -150px;
+        }
+        .lnb li:nth-child(1):hover a {
+            background-position: 0 -50px;
+        }
+        .lnb li:nth-child(2):hover a {
+            background-position: 0 -100px;
+        }
+        .lnb li:nth-child(3):hover a {
+            background-position: 0 -150px;
+        }
+        .lnb li:nth-child(4):hover a {
+            background-position: 0 -200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>sprire image</h1>
+    <!-- 페이지의 로딩속도를 고려한 것 -->
+    <ul class="lnb">
+        <li><a href="#">Theater</a></li>
+        <li><a href="#">Secret Garden</a></li>
+        <li><a href="#">Concert Hall</a></li>
+        <li><a href="#">Animal Farm</a></li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+.container {
+    width: 450px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+/* align -> 교차축 justify ->주축 */
+/* 아이템박스에 선언 */
+#box1 {
+    align-self: flex-start;
+}
+
+#box3 {
+    align-self: stretch;
+}

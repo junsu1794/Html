@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .content{
+            background: url(./img/bg_fixed.png) no-repeat;
+            background-size: cover;
+            height: 500px;
+        }
+        h1{
+            color: white;
+            font-size: 8em;
+            /* 상위요소중 position static 아닌놈 기준 */
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .inner{
+            max-width: 1280px;
+            margin: auto;
+            background-color: rgba(0, 255, 255, .5);
+            height: 500px;
+            position: relative;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="inner">
+            <h1>CSS3</h1>
+        </div>
+    </div>
+    <div class="content">
+        <div class="inner">
+            <h1>CSS3</h1>
+        </div>
+    </div>
+    <div class="content">
+        <div class="inner">
+            <h1>CSS3</h1>
+        </div>
+    </div>
+</body>
+
+</html>

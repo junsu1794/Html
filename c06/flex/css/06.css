@@ -1,0 +1,42 @@
+.container {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.box {
+    width: 80px;
+    background-color: #222;
+    border: 1px dashed #d05757;
+}
+
+#opt1 {
+    align-content: flex-start;
+}
+
+#opt2 {
+    align-content: flex-end;
+}
+
+#opt3 {
+    justify-content: center;
+    align-content: center;
+}
+
+#opt4 {
+    /* 시작,끝점 배치 후 중간은 균등배치 */
+    align-content: space-between;
+}
+
+#opt5 {
+    /* 몽땅 균등배치 */
+    align-content: space-around;
+}
+
+#opt6 {
+    /* 늘림 */
+    align-content: stretch;
+}

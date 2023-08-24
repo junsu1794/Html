@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            width: 0;
+            padding: 0;
+        }
+
+        .r1::after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+
+        .container {
+            width: 700px;
+            height: 500px;
+            background-color: aqua;
+            padding: 150px 100px;
+            box-sizing: border-box
+        }
+
+        .r2 {
+            float: left;
+        }
+
+        .r3 {
+            float: right;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container r1">
+        <div class="box r2"></div>
+        <div class="box r3"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .cf:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .fl {
+      float: left;
+    }
+
+    .bg_gray {
+      background-color: gray;
+    }
+
+    .wrap {
+      margin: auto;
+      width: 1230px;
+    }
+
+    .wrap div[class*='box'] {
+      height: 400px;
+    }
+
+    .box_3 {
+      width: 1230px;
+      margin-bottom: 140px;
+    }
+
+    .wrap .fl.box_2 {
+      width: 282px;
+      height:280px;
+      margin-right: 20px;
+      margin-bottom: 120px;
+    }
+
+    .box_1 {
+      width: 180px;
+      margin-left: 20px;
+    }
+    .box_4 {
+      width: 1017px;
+      margin:0 auto 140px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="box_3 bg_gray"></div>
+    <div class="box_4 bg_gray"></div>
+    <div class="cf">
+      <div class="box_2 bg_gray fl"></div>
+      <div class="box_2 bg_gray fl"></div>
+      <div class="box_2 bg_gray fl"></div>
+      <div class="box_2 bg_gray fl"></div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+.wrap { width: 1000px; margin: auto; }
+.box1 { display: flex; } 
+.header { width: 800px; height: 100px; background-color: green; } 
+.nav { width: 800px; height: 100px; background-color: red; } 
+.side { width: 300px; height: 500px; background-color: antiquewhite; } 
+.contents { width: 500px; height: 500px; background-color: aqua; float: left; } 
+.footer { width: 800px; height: 100px; background-color: aquamarine; } 
+

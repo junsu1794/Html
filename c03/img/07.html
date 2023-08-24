@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>블록과 인라인</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        body {
+            font-family: "돋움", sans-serif;
+            font-size: 16px;
+            letter-spacing: -0.5px;
+            color: #333;
+        }
+
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #6e1515;
+        }
+
+        /* display 변경 */
+        .gnb li {
+            display: inline;
+        }
+
+        .gnb li a {
+            display: inline-block;
+            display: block;
+            width: 100px;
+            color: white;
+            height: 35px;
+            background-color: brown;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        .dep2 li a {
+            display: none;
+            background-color: orange;
+        }
+
+        .gnb li a:hover+.dep2 li a {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="gnb">
+        <li><a href="#">Company</a>
+            <ul class="dep2">
+                <li><a href="#">투뎁스</a></li>
+                <li><a href="#">투뎁스</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Community</a></li>
+    </ul>
+</body>
+
+</html>

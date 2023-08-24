@@ -1,0 +1,18 @@
+* {margin: 0;padding: 0;box-sizing: border-box; }
+.df {display: flex; }
+.dn {display: none; }
+.db {display: block; }
+ul {list-style: none; }
+
+.inner {width: 100%;max-width: 1400px;margin: auto; }
+
+/* nav */
+nav {height: 50px;overflow: hidden;width: 100%;position: absolute;background: linear-gradient(180deg, rgba(102, 205, 170, 1) 0px, rgba(102, 205, 170, 1) 50px, rgba(205, 160, 102, 1) 51px, rgba(205, 160, 102, 1) 100%);transition: all 0.5s;z-index: 99;padding-bottom: 0px; }
+nav:hover {overflow: visible;height: auto;padding-bottom: 50px; }
+.gnb {display: flex;position: relative; }
+.gnb a {color: black;display: block;padding: 16px; }
+.gnb > li > a {color: #c01587; }
+.gnb li {width: 25%;text-align: center; }
+.sub li {width: 100%;text-align: center; }
+
+main {position: relative;top: 50px; }

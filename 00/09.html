@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 캡션 달기 연습</title>
+    <style>
+        *{
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>이미지 캡션 달기 연습하기</h1>
+
+    <hr>
+
+    귀여운 하양이
+    <img src="/00/image/귀여운 하양이.jpeg" alt="하양이">
+    <hr>
+
+    까칠한 블루
+    <img src="/00/image/까칠한 블루.jpeg" alt="블루">
+
+    <hr>
+    
+    <h2>이미지맵을 이용한 하이퍼링크 연결</h2>
+    <div><img src="/00/image/banner_map.gif" alt="" usemap="#bannerImg"></div>
+    <map name="#bannerImg">
+        <area shape="rect" coords="0,0,100,100" href="http://naver.com" alt="">
+        <area shape="rect" coords="100,0,200,100" href="http://daum.net" alt="">
+        <area shape="rect" coords="0,100,100,200" href="http://nate.com" alt="">
+        <area shape="rect" coords="100,100,200,200" href="http://google.com" alt="">
+    </map>
+
+    <hr>
+
+    <div><img src="/00/image/usemap.png" alt="" usemap="#usemap"></div>
+    <map name="#usemap">
+        <area shape="rect" coords="0,0,300,150" href="http://naver.com" alt="">
+        <area shape="rect" coords="300,0,600,300" href="http://daum.net" alt="">
+        <area shape="rect" coords="0,150,300,300" href="http://google.com" alt="">
+    </map>
+</body>
+
+</html>

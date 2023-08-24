@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>label</title>
+</head>
+
+<body>
+    <h1>label 요소</h1>
+    <form action="#" method="post"></form>
+    <table>
+        <caption>준수의 회원가입</caption>
+        <colgroup>
+            <col>
+            <col>
+        </colgroup>
+        <tbody>
+            <tr>
+                <form action=""></form>
+                <th scope="row"><label for="id">아이디</label></th>
+                <td><input type="text" id="id" title="아이디 입력" placeholder="아이디를 입력하세요"></td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="password">비밀번호</label></th>
+                <td><input type="password" id="password" title="비밀번호 입력" placeholder="비밀번호를 입력하세요"></td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="pw_r">비밀번호 재입력</label></th>
+                <td><input type="password" id="pw_r" title="비빌번호 재입력" placeholder="비밀번호를 재입력하세요"></td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="email">이메일</label></th>
+
+                <td>
+                    <input type="email" id="email" title="이메일 입력">@
+                    <input type="text" title="이메일 주소 입력">
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="hp">핸드폰 번호</label></th>
+                <td>
+                    <select name="hp" id="hp">
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="012">012</option>
+                    </select>
+                    <input type="text" id="hp2" title="핸드폰 번호 입력">@
+                    <input type="text" title="이메일 주소 입력">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <input type="submit" value="회원가입">
+        <input type="reset" value="취소">
+    </div>
+    <div>
+        예<input type="radio" name="receive" checked>
+        아니오<input type="radio" name="receive">
+    </div>
+    <div>
+        <label for=""><input type="checkbox" name="hobby1">수영</label>
+        <label for=""><input type="checkbox" name="hobby2">스키</label>
+        <label for=""><input type="checkbox" name="hobby3">발레</label>
+    </div>
+</body>
+
+</html>

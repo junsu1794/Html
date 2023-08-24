@@ -1,0 +1,23 @@
+/* 부모한테 선언하면 자식이 배치됌 */
+/* 부모는 컨테이너박스, 자식은 아이템박스이다. */
+.container {
+    display: flex;
+}
+
+#opt1 {
+    flex-wrap: nowrap;
+}
+
+#opt2 {
+    flex-wrap: wrap;
+}
+
+#opt3 {
+    flex-wrap: wrap-reverse;
+}
+
+#opt4 {
+    /* direction wrap */
+    flex-flow: row wrap;
+    flex-flow: column nowrap;
+}

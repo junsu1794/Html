@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* CSS란? html 문서를 꾸며주는 언어 */
+        /* content = html 문서의 태그 사이에 작성하는 것 */
+        /* 사용자 입장에서는 웹 페이지에서 보이는 글자 */
+        /* 가상선택자에 cintent 속성을 넣는 이유 
+        :before,
+        */
+        .cf {
+            /* ::after 
+            content: '';
+            clear: both;
+            display: block; */
+            overflow: hidden;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .wrap {
+            /* max-width: 500px; */
+            width: 500px;
+            margin: auto;
+            background-color: gray;
+        }
+
+        header {
+            background-color: red;
+        }
+
+        main {
+            background-color: blue;
+        }
+
+        section {
+            background-color: rgb(10, 250, 118);
+            width: 300px;
+
+        }
+
+        .fr {
+            float: right;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        ul, h1 {
+            background-color: yellow;
+        }
+        .mx1{
+            margin: 0 10px;
+        }
+        nav li{
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <header class="cf">
+            <h1 class="fl">Logo</h1>
+            <ul class="fr">
+                <li class="fl"><a href="#">test</a></li>
+                <li class="fl"><a href="#">test</a></li>
+                <li class="fl"><a href="#">test</a></li>
+                <li class="fl"><a href="#">test</a></li>
+            </ul>
+        </header>
+        <main class="cf">
+            <nav class="fl">
+                <ul class="fr">
+                    <li class="fl"><a href="#">m1</a></li>
+                    <li class="fl mx1"><a href="#">m1</a></li>
+                    <li class="fl"><a href="#">m1</a></li>
+                </ul>
+            </nav>
+            <section class="fl">section</section>
+            <aside class="fl">aside</aside>
+        </main>
+        <footer>footer</footer>
+    </div>
+</body>
+
+</html>

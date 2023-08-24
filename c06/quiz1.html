@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cf::after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+
+        .tr {
+            float: left;
+        }
+
+        .tt {
+            float: right;
+
+        }
+
+        .container {
+            width: 1200px;
+            height: 300px;
+            background-color: white;
+            box-sizing: border-box;
+            margin: auto;
+            padding: 0px 100px;
+        }
+
+        .tl{
+            width: 1000px;
+            height: 300px;
+            background-color: darkgray;
+        }
+        .ti{
+            width: 700px;
+            height: 300px;
+            background: darkgray;
+            margin: auto;
+            margin-top: 50px;
+        }
+        .tr {
+            width: 370px;
+            height: 300px;
+            background-color: darkgray;
+            margin-top: 50px;
+
+        }
+
+        .box:nth-child(2n):not(:last-child) {
+            margin-left: 50px;
+        }
+
+        .tt {
+            width: 188px;
+            height: 300px;
+            background-color: darkgray;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container cf">
+        <div class="box tl"></div>
+        <div>
+            <div class="box ti"></div>
+        </div>
+        <div>
+            <div class="box tr"></div>
+            <div class="box tr"></div>
+            <div class="box tt"></div>
+        </div>
+    </div>
+</body>
+
+</html>

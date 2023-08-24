@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>요소의 안 여백</title>
+    <style>
+        body {
+            background: url(img/bg_grid.gif);
+            font: 16px "Malgun Gothic";
+        }
+
+        p {
+            background-color: rgb(137, 236, 128);
+            width: 600px;
+            height: 100px;
+            /* 4방향 */
+            padding: 50px;
+            /* 현재 박스의 너비는 700px=600+50+50*/
+            /* top/bottom right/left */
+            /* padding: 50px 10px; */
+
+            /* top right/left bottom */
+            /* padding: 100px 10px 30px; */
+            /* 위에서부터 시계방향 */
+
+            /* top right bottom left */
+            padding: 50px 70px 100px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>BOX - padding</h3>
+    <p>철수가 영희에게 퍼블리셔란 무슨 일을 하는 직업이니? 하고 물었다.</p>
+    <p>그러자 영희는 철수에게 아~ 그건 다 함께 잘 살기 위해 인터넷 선장이 되는 일이야 라고 말했다.</p>
+</body>
+
+</html>

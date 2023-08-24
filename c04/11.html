@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radial-gradient </title>
+    <style>
+        p {
+            padding: 60px;
+        }
+
+        .rg1 {
+            background: radial-gradient(closest-side at 35% 35%, red, yellow, blue);
+        }
+
+        .rg2 {
+            background: radial-gradient(closest-corner at 35% 35%, red, yellow, blue);
+        }
+
+        .rg3 {
+            background: radial-gradient(farthest-side at 35% 35%, red, yellow, blue);
+        }
+
+        .rg4 {
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 9%, rgba(116, 9, 121, 1) 44%, rgba(168, 42, 42, 1) 82%, rgba(73, 45, 152, 1) 100%, rgba(255, 179, 0, 1) 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <p class="rg1"></p>
+    <p class="rg2"></p>
+    <p class="rg3"></p>
+    <p class="rg4"></p>
+</body>
+
+</html>

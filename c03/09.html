@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>숨기기</title>
+    <style>
+        .box {
+            margin: 10px;
+            border: 1px solid;
+        }
+
+        /* none으로 없애기(공간도 빠진다.) */
+        .hdd {
+            color: red;
+            display: none;
+        }
+
+        /* 불투명도로 안보이게 (공간이 그대로 남아있다.)*/
+        .hdd2 {
+            /* color: rgba(255, 0, 0, 0); */
+            /* visibility: hidden; */
+            /* opacity: 0; */
+            color: transparent;
+
+        }
+
+        .box:nth-child(4):hover .hdd2 {
+            /* color: rgba(255, 0, 0, 1); */
+            /* visibility: visible; */
+            opacity: 1;
+            color: red;
+        }
+
+        .box:nth-child(3):hover .hdd {
+            display: contents;
+        }
+
+        /* .box:nth-child(2):hover-> 두번째 자식요소인 .box 마우스 오버시 */
+        /* ~.box .hdd => 다음형제 요소중 .box 하위의 .hdd를 선택함 */
+        .box:nth-child(2):hover~.box .hdd {
+            display: contents;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>화면에서 숨기기</h1>
+    <div class="box">
+        <p><strong>이름 :</strong>홍길동</p>
+        <p><strong>연락처 :</strong>서울 종로구 세검정 </p>
+    </div>
+    <div class="box">
+        <p><strong class="hdd">이름 :</strong>홍길동</p>
+        <p><strong class="hdd">연락처 :</strong>서울 종로구 세검정 </p>
+        <p>
+            color:rgba(255,255,255,0) -> 상속됌 <br>
+            visibility, opacity -> 상속안됌 <br>
+            display -> 공간까지 삭제
+        </p>
+    </div>
+    <div class="box">
+        <p><strong class="hdd2">이름 :</strong>홍길동</p>
+        <p><strong class="hdd2">연락처 :</strong>서울 종로구 세검정 </p>
+    </div>
+</body>
+
+</html>

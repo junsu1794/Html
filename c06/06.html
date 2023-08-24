@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>POSITION</title>
+    <style>
+        body,
+        div,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 20px;
+            background: url("img/bg_grid.gif");
+        }
+        /* absolute, fixed 화면 기준
+        absolute -> 부모요소의 position 속성이 static 아닐경우 기준이 됌
+        */
+        .box {
+            width: 650px;
+            height: 300px;
+            background: rgba(0, 0, 0, 0.3);
+            position: fixed;
+        }
+
+        p {
+            width: 250px;
+            height: 100px;
+            box-sizing: border-box;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .red {
+            background: crimson;
+        }
+
+        .green {
+            background: lime;
+        }
+
+        .blue {
+            background: dodgerblue;
+        }
+
+        /* position
+        요소에 좌표값을 입력하여 배치하는 속성 
+        static | reative | absolute | fixed | sticky
+        기본    | 상대좌표 |절대좌표 | 고정좌표 | 스티키
+        */
+        .red {
+            /* 자신의 위치가 기준 */
+            position: relative;
+            /* window */
+            position: absolute;
+            top: 100px;
+            left: 250px;
+            /* z-index: -1; */
+        }
+
+        .green {
+            position: relative;
+            position: absolute;
+            left: 20px;
+            top: 0;
+            z-index: 2;
+        }
+        .blue{
+            position: relative;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p class="red">박스의 크기와 위치를 잘 살펴보아야 합니다.</p>
+        <p class="green">박스의 포지션 속성을 바꿔가며 테스트해 보아야 합니다.</p>
+        <p class="blue">포지션을 이해하기 위해서는 시험해보고 관찰해 보는 것이 절대적으로 필요합니다.</p>
+    </div>
+</body>
+
+</html>

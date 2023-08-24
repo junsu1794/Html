@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position 으로 중앙정렬</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            text-align: center;
+            color: white;
+            line-height: 50px;
+            font-weight: bold;
+        }
+
+        .flower {
+            position: absolute;
+            top: 45%;
+            right: calc(70% / 2);
+            transform: translate(calc(-50px / 2), calc(-50% / 2));
+        }
+
+        .container {
+            background: red;
+            width: 500px;
+            height: 500px;
+            position: relative;
+            left: 50%;
+            /* margin-left: -250px; */
+            transform: translateX(-250px);
+        }
+
+        .container2 {
+            width: 500px;
+            height: 500px;
+            background: blue;
+            margin: auto;
+            position: relative;
+        }
+
+        .box1 {
+            /* / = 연산글자 */
+            background: rgb(255, 255, 0);
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: calc(100% / 2);
+            /* margin-left: -25px; */
+            top: 50%;
+            /* margin-top: -25px; */
+            transform: translate(calc(-50px / 2), calc(-50px / 2));
+            /* transform: translateX(calc(-50px / 2), transform: translateY(calc(-50px / 2)); */
+            z-index: 3;
+        }
+
+        .box2 {
+            background: gray;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: calc(80% / 2);
+            top: 40%;
+            transform: translate(calc(-50px / 2), calc(-50px / 2));
+            z-index: 2;
+        }
+
+        .box3 {
+            background: blue;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: calc(50% / 2);
+            top: 25%;
+            transform: translate(calc(-50px / 2), calc(-50px / 2));
+            z-index: 1;
+        }
+
+        .box4 {
+            background-color: aqua;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: calc(30% / 2);
+            top: 15%;
+            transform: translate(calc(-50px / 2), calc(-50px / 2));
+            z-index: 0;
+        }
+
+        .box5 {
+            background: gray;
+            width: 250px;
+            height: 200px;
+            position: absolute;
+            left: calc(60% / 2);
+            top: 40%;
+            transform: translate(calc(-50px / 2), calc(-50px / 2));
+        }
+
+        .container3 {
+            background: red;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            position: relative;
+        }
+
+        .container4 {
+            background: beige;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            position: relative;
+        }
+
+        .box6 {
+            color: white;
+            position: absolute;
+            left: calc(20% / 2);
+            top: 45%;
+            font-size: 50px;
+        }
+
+        .box7 {
+            color: white;
+            position: absolute;
+            right: calc(20% / 2);
+            top: 45%;
+            font-size: 50px;
+        }
+        .box8{
+            color: black;
+            position: absolute;
+            top: 45%;
+            left: calc(80% / 2);
+            width: 100px;
+            height: 100px;
+            background-color: gainsboro;
+            line-height: 90px;
+            font-size: 40px;
+        }
+        .box9{
+            width: 50px;
+            height: 50px;
+            color: green;
+            position: absolute;
+            left: calc(-25% / 2);
+            background-color: gainsboro;
+        }
+        .box10{
+            color: green;
+            position: absolute;
+            left: calc(205% / 2);
+            background-color: gainsboro;
+        }
+        .box11{
+            color: green;
+            position: absolute;
+            left: calc(90% / 2);
+            bottom: 105%;
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+    </div>
+    <div class="container2">
+        <div class="box5">box5</div>
+    </div>
+    <div class="container3">
+        <div class="box6">◁</div>
+        <div class="flower">
+            <img src="./img/bg_flower.png" alt="">
+        </div>
+        <div class="box7">▷</div>
+    </div>
+    <div class="container4">
+        <div class="box8">box8</div>
+        <div class="box9">box9</div>
+        <div class="box10">box10</div>
+        <div class="box11">box11</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset */
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: "맑은 고딕,돋움,srial";
+        }
+
+        body {
+            margin: 50px;
+        }
+
+        /* a태그 디자인 밑줄이 없어진다*/
+        a {
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        a:link :visited {
+            color: gray
+        }
+
+        a:hover,
+        a:active {
+            color: #0400ff;
+        }
+
+        /* div 디자인 */
+        div {
+            width: 150px;
+            margin-bottom: 50px;
+        }
+
+        #categoryBox {
+            border: 5px solid teal;
+        }
+
+        #bbsBox {
+            border: 5px solid deeppink;
+        }
+
+        #categoryBox>h2 {
+            border-bottom: 1px solid black;
+        }
+    </style>
+    <!-- quiz5 css -->
+    <style>
+        ul{list-style: none;}
+        #bbsBox a {
+            color: rgb(255, 255, 255);
+        }
+
+        a[title="자유 게시판"] {
+            background: rgb(52, 17, 133);
+            color: rgb(255, 255, 255);
+        }
+
+        a[title~="장터"] {
+            background: red;
+        }
+
+        a[title^="나"] {
+            background: #00ff96;
+        }
+        a[title*="후"] {
+            background: hsl(180, 100%, 50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="categoryBox">
+        <h2><img src="/01/Categories.png" alt="title"></h2>
+        <ul>
+            <li><a href="#">밥/죽/면</a></li>
+            <li><a href="#">매일 반찬</a></li>
+            <li><a href="#">국/찌게/전골</a></li>
+            <li><a href="#">가족/초대요리</a></li>
+            <li><a href="#">소스/양념장</a></li>
+            <li><a href="#">간식/음료</a></li>
+            <li><a href="#">기타</a></li>
+        </ul>
+    </div>
+    <div id="bbsBox">
+        <h2><img src="/01/board.png" alt="title"></h2>
+        <ul>
+            <li><a href="#" title="자유 게시판">자유 게시판</a></li>
+            <li><a href="#" title="회원 장터">회원 장터</a></li>
+            <li><a href="#" title="나만의 레시피">나만의 레시피</a></li>
+            <li><a href="#" title="불후의 레시피">불후의 레시피</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

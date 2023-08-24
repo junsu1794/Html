@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <title>배경이미지의 크기</title>
+    <style>
+        .who {
+            height: 150px;
+            margin-bottom: 10px;
+            background: #67758e url("img/bg_size.png") no-repeat;
+        }
+
+        /* width height */
+        .who1 {
+            background-size: 100px 200px;
+            background-position: center;
+        }
+
+        .who2 {
+            /* 하나만 쓰면 width에 적용 height는 자동 */
+            background-size: 50px;
+        }
+
+        .who3 {
+            background-size: 80% 150%;
+        }
+
+        .who4 {
+            /* cover 식탁커버 */
+            background-size: cover;
+        }
+
+        .who5 {
+            height: 500px;
+            /* 컨테이너 */
+            background-size: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="who who1"></div>
+    <div class="who who2"></div>
+    <div class="who who3"></div>
+    <div class="who who4"></div>
+    <div class="who who5"></div>
+</body>
+
+</html>
