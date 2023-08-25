@@ -1,0 +1,22 @@
+* {margin: 0;padding: 0;box-sizing: border-box; }
+.df {display: flex; }
+.dn {display: none; }
+.db {display: block; }
+ul{list-style: none;}
+
+.inner {width: 100%;max-width: 1400px;margin: auto; }
+
+/* gnb */
+.gnb{justify-content: space-between; position: absolute; left:0; /* right:0;  */}
+
+.gnb li{flex:1 1 25%;}
+.gnb li a{display: block; padding:1rem; background:pink; font-size:2em;}
+.gnb li .depth2{display:none; }
+.gnb li:hover .depth2{display:block;}
+.gnb li:hover .depth2 li a{background-color:red; color:white;}
+.gnb li:hover .depth2 li:hover a{background-color:yellow; color:black;}
+
+
+
+/* main */
+main{background:ivory; height: 100vh; }

@@ -1,0 +1,20 @@
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+
+/* common */
+.inner{width: 100%; max-width: 1400px; margin: auto;}
+.w100{width: 100%; background: pink;}
+
+/* nav */
+nav{width: 100%; background: beige; height: 50px;}
+
+.gnb{display: flex;}
+
+.depth1{height: 100%;}
+.depth1>a{display: block; padding: 1rem; color: rgb(252, 5, 5); font-size: 1.2rem; line-height: 1.2rem;}
+.depth1>.w100 {overflow: hidden; height: 0;}
+.depth1:hover .w100{height: auto;}
+
+/* 투뎁스 100%로 드롭다운 */
+nav{position: relative;}
+nav>.gnb>.depth1>.w100{position: absolute; left: 0;}

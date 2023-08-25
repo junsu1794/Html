@@ -1,0 +1,35 @@
+* {margin: 0;padding: 0;box-sizing: border-box; }
+.df {display: flex; }
+.dn {display: none; }
+.db {display: block; }
+ul{list-style: none;}
+
+.inner {width: 100%;max-width: 1400px;margin: auto; }
+
+/* gnb */
+/* .gnb{justify-content: space-between; position: absolute; left:0; right:0; } */
+nav{background:#cae3b3;}
+/* relative 로 적용시 형제요소가 밀려남 */
+.gnb{ justify-content: space-between; position:relative; }
+
+.gnb li{flex:1 1 25%; height:100%;}
+.gnb li a{display: block; padding:1rem; background:pink; font-size:2em;}
+.gnb li .depth2{display:none; height: 100%;}
+.gnb li .depth2 a{background:skyblue; }
+.gnb li .depth2 li{position:relative;}
+.gnb li .depth3{display:none; position:absolute; top:0; left:50%; z-index: 55;height: 100%; width:100%;}
+.gnb li .depth2 li:hover .depth3{display:block;}
+.gnb li .depth3 a{background:#744a76; color:white;}
+
+.gnb li:hover .depth2{display:block;}
+.gnb li:hover .depth2 li a{background-color:red; color:white;}
+.gnb li:hover .depth2 li:hover a{background-color:yellow; color:black;}
+
+
+
+/* main */
+main{background:#cae3b3; height: 100vh; }
+
+/* 해결  */
+main{position: absolute; width: 100vw; top:75px;}
+.gnb{z-index: 3;}
