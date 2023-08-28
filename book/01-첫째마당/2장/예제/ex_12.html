@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        video,
+        iframe {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        #wrap {
+            position: relative;
+            height: 0;
+            overflow: hidden;
+            /* 위아래 패딩은 부모의 가로너비 기준으로 계산됌 */
+            padding-bottom: 56.25%;
+        }
+
+        iframe,
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<!-- 동영상의 비율 16:9 
+TV,모니터의 국제표준 16:9
+-->
+
+<body>
+    <div id="wrap">
+        <iframe src="https://player.vimeo.com/video/192526798?byline=0&badge=0" width="640" height="360" frameborder="0"
+            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+</body>
+
+</html>

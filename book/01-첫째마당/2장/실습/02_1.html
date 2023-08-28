@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		#wrap {
+			/* 960px */
+			width: 90%;
+			height: 500px;
+			border: 2px solid black;
+			margin: auto;
+		}
+
+		.container {
+			width: 93.75%;
+			height: 492px;
+			margin: auto;
+			border: 4px solid #ff0000;
+		}
+
+		.box {
+			display: inline-block;
+			height: 100%;
+		}
+
+		.container>div:nth-of-type(1) {
+			background-color: red;
+			width: 32%;
+		}
+
+		.container>div:nth-of-type(2) {
+			background-color: yellow;
+			width: 66.66666666666667%;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 고정값을 가변값으로 변경하기
+	(자식/부모)
+	(부분/전체)*100
+	-->
+	<div id="wrap">
+		<div class="container">
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+</body>
+
+</html>
