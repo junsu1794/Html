@@ -1,0 +1,123 @@
+@charset 'utf-8';
+
+/* === 모바일용 css ===  */
+/* 기본 css  */
+#wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    /* 모바일에서  레이아웃은 세로, 한줄로 설정*/
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#wrap section {
+    box-sizing: border-box;
+}
+
+section h2:not(.title) {
+    text-indent: -9999999px;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+}
+
+/* 인포메이션 */
+.info_section {
+    order: 1;
+    /* 모바일 화면에서 제일 우선 배치 */
+    width: 100%;
+    background: #2ecc71;
+    border-bottom: 1px solid #39d67c;
+}
+
+.info_list {
+    display: flex;
+}
+
+.info_list li {
+    width: 25%;
+    text-align: center;
+}
+
+.info_list li a {
+    display: block;
+    padding: 15px 0;
+    padding: 0.938rem 0;
+    /* 브라우저 호환성고려 폴백기법 */
+}
+
+
+
+/* === 태블릿용 css === */
+@media all and (min-width: 768px) {
+
+    /* 기본 CSS */
+    #wrap {
+        flex-flow: row wrap;
+        /* 태블릿에서  레이아웃은 가로, 여러줄로 설정*/
+    }
+}
+
+/* 헤더영역 */
+.header {
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.logo {
+    order: 1;
+    padding: 1.875rem 0;
+    font-size: 1.188rem;
+    line-height: 1.313rem;
+    text-align: center;
+    background: #2ecc71;
+    text-shadow: 0px 1px 1px #25ab5e;
+}
+.nav {
+	order: 2;
+	width: 100%;
+}
+.gnb li{
+    display: flex;
+    background: #2c3e50;
+}
+.gnb li a{
+    width: 80%;
+    padding: 1.25rem 0;
+    font-size: 0.938rem;
+    text-indent: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.sub_menu_toggle_btn{
+    /* 접근성,seo */
+    width: 20%;
+    text-indent: -99999px;
+    background: url(../images/s_images/sub_menu_toggle_btn.png) center center no-repeat; cursor: pointer;
+}
+
+/* === PC css === */
+@media all and (min-width: 960px) {
+
+    /* 기본 CSS */
+    #wrap {
+        position: relative;
+        width: 90%;
+    }
+
+    .info_section {
+        order: 0;
+        position: absolute;
+        top: 1.875rem;
+        right: 1.875rem;
+        z-index: 30;
+        width: auto;
+        border-bottom: 0;
+    }
+}
