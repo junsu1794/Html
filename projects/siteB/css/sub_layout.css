@@ -1,0 +1,45 @@
+/* 서브헤더영역 */
+.sub_header_section{
+    order: 3;
+    padding: 3rem 0;
+    text-align: center;
+    background: #219af7;
+}
+
+.sub_header_section h2{
+    margin-bottom: 0.75rem;
+    font-size: 1.313rem;
+    color: #fff;
+}
+.sub_header_section li{
+    display: inline-block;
+    padding: 20px;
+}
+.sub_header_section{width: 100%;}
+/* 콘텐츠영역 */
+.content_section{
+    order: 4;
+    padding: 1.25rem;
+    background: #fff;
+}
+/* ======태블릿======= */
+@media screen and (min-width:768px) {
+    /* 콘텐츠영역 */
+    .content_section {
+        padding: 2.5rem;
+    }
+    
+}
+/* ======PC======= */
+@media screen and (min-width:960px) {
+    /* 서브헤더영역 */
+    .sub_header_section{
+        order: 2;
+    }
+    /* 콘텐츠영역 */
+    .content_section {
+        order: 3;
+        padding: 3.75rem;
+    }
+    
+}

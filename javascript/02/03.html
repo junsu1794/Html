@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>참조형</title>
+</head>
+
+<body>
+    <script>
+        //Object 객체
+        let person = {
+            name: 'mimi',
+            age: 20,
+            city: 'seoul',
+        }
+        console.log(person.name);
+        console.log(person.age);
+        // Array 배열
+        let zoo = ['koala','cat','🐶'];
+        console.log(zoo, typeof zoo);
+        console.log(zoo[0]);
+        console.log(zoo[2]);
+        document.write(`<h1 style="font-size:500px;">${zoo[2]}</h1>`);
+
+        //function 함수
+        function addNums(num1, num2) {
+            return num1 + num2;
+        }
+        console.log(addNums(5,10));
+    </script>
+</body>
+
+</html>

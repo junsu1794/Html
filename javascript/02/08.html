@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교연산자</title>
+</head>
+
+<body>
+    <script>
+        const x = 10;
+        const y = 20;
+        const z = '10';
+        // document.write(x + '>=' + y +':');
+        // document.write(x >= y);
+        document.write(`${x}>= ${y}:${x >= y}<br>`);
+        document.write(`${x <= y}<br>`); //10 <= 20 (t)
+        document.write(`${x != y}<br>`); //10 != 20 (t)
+        document.write(`${x != z}<br>`); //10 != '10' (f)
+        document.write(`${x !== z}<br>`); //10 !== '10' (t)
+        document.write(`==값이 같은지${x == z}<br>`); //10 == '10' (t)
+        document.write(`===자료형이 같은지?${x === z}<br>`); //10 === '10' (f)
+    </script>
+</body>
+
+</html>

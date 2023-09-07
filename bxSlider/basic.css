@@ -1,0 +1,42 @@
+.slideWrap{
+    max-width: 960px;
+    width: 100%;
+    margin: 2em auto;
+    position: relative;
+}
+img{
+    width: 100%;
+}
+.bx-controls{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+.bx-controls a{
+    background-color: #000;
+    font-size: 3em;
+}
+.img_ctl span a{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-indent: -99999px;
+}
+.img_ctl span.prev a{
+    background-image: url(./images/left.png);
+}
+.img_ctl span.next a{
+    background-image: url(./images/right.png);
+}
+.bx-controls{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bx-pager{
+    display: flex;
+}
+.video_slides video{
+    width: 100%;
+}

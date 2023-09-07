@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = 1;
+        document.write(`${x++}<br>`); // 1(2)
+        document.write(`${x++}<br>`); // 2(3)
+        document.write(`${x++}<br>`); // 3(4)
+        document.write(`${x++}<br>`); // 4(5)
+        x = 1;
+        document.write(`${++x}<br>`); //2
+        document.write(`${++x}<br>`); //3
+        document.write(`${++x}<br>`); //4
+    </script>
+    <script>
+        let number = 10;
+        alert(number++) // 10 (11)
+        alert(++number) // (12) 11=11+1
+        alert(number--) // 12(11)12=12-1
+        alert(--number) //10 11=11-1
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let your_sex = '남자';
+        your_sex = '여자';
+        document.write(`당신은 ${your_sex} 이므로`)
+        if (your_sex == '남자') { document.write('🧑'); }
+        if (your_sex == '여자') { document.write('👧'); }
+    </script>
+    <script>
+        /* 현재 시간 알아내서 오전이면 라이트, 오후면 다크 테마로 변경*/
+        const date = new Date();
+        const hour = date.getHours();
+        /* 조건문 */
+        if (hour < 12) {
+            document.querySelector('body').style.backgroundColor = "yellow";
+            document.querySelector('body').style.color = "red";
+        }
+        // 다크테마는 18시 이후로 적용하기
+        if (hour > 12) {
+            document.querySelector('body').style.backgroundColor = "black";
+            document.querySelector('body').style.color = "white";
+        }
+    </script>
+    <script>
+        
+    </script>
+</body>
+
+</html>

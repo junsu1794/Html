@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* seo,접근성 */
+        .blind{
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+        .selectbox{
+            position: relative;
+            width: 200px;
+            border: 1px solid #999;
+            z-index: 1;
+        }
+        .selectbox::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            width: 0;
+            height: 0;
+            margin-top: -1px;
+            border-top: 5px solid #333;
+            border-right: 5px solid transparent; 
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid transparent;
+        }
+        select {
+            /* 네이티브 외형 감추기 */
+            appearance: none;
+            width: 100%;
+            padding: .8em .5em;
+            height: auto;
+            opacity: 0;
+        }
+        .selectbox label{
+            position: absolute;
+            top: 1px;
+            left: 5px;
+            padding: .8em .5em;
+            color: #ff0000;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            /* .selectbox 요소 하위의 select 태그를 변수 selectTarget에 할당 */ 
+            var selectTarget=$('.selectbox select');
+            /* 변수 selectTarget 의 값 변경시 할일 */ 
+            /* .change input에만 쓸수 있다.*/ 
+            selectTarget.change (function(){
+                var selectName=$(this).children('option:selected').text();
+                $(this).siblings('label').text(selectName);
+                /*alert(selectName)*/
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <fieldset class="selectbox">
+            <legend class="blind">색상을 선택하세요</legend>
+            <label for="select">옵션</label>
+            <select id="select">
+                <option selected>색상</option>
+                <option>Red</option>
+                <option>Black</option>
+                <option>Green</option>
+            </select>
+        </fieldset>
+    </form>
+</body>
+
+</html>
