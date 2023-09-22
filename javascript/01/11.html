@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
-
 <body>
-    <script>
-        var n = 10 //bad
-        var n = 10; //good
-        var n = 10, sum = 0; // bad
-        var n = 10; //good
-        var sum = 0; //good
-    </script>
-    <script>
-        var sum=2;//bad
-        var num=sum+10; //bad
-        var sum = 2; //good
-        var num = sum + 10; //good
-    </script>
-</body>
+<script>
+  var n=10//bad
+  var n=10;//good
+  var n=10,sum=0;//bad
+  var n=10;//good
+  var sum=0;//good
+</script>
+<script>
+  var sum=2;//bad
+  var num=sum+10;//bad
+  var sum = 2; //good
+  var num = sum + 10; //good
+</script>
 
+</body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function calcSum(n) {
+      //블록변수 선언, 초기화
+      let sum = 0;
+      //전역변수 선언 초기화
+      sum2 = 0;
+      for (let i = 1; i < n + 1; i++) {
+        sum += i;
+      }
+      console.log(`블록변수 sum: ${sum}`);
+      //14번의 let sum 값의 재할당
+      sum = 100
+      console.log(sum);
+      //14번의 let sum 값의 재선언 불가
+      //let sum = 100;
+    }
+    calcSum(10)
+  </script>
+</body>
+
+</html>

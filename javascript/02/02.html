@@ -2,45 +2,20 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>원시형</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나이계산하기</title>
 </head>
 
 <body>
-    <h1>원시형</h1>
-    <script>
-        //number
-        let num1 = 1;
-        //num1 식별자를 선언 후 숫자1을 할당함
-        //변수 num1을 1로 초기화 함
-        let num2 = 2;
-        let sum = num1 + num2;
-        console.log(`sum: ${sum} 자료형은? ${typeof sum}`);
-
-        //string
-
-        let str1 = '1';
-        let str2 = '2';
-        let para = str1 + str2;
-        document.write(`str1:${str1} str2:${str2} para: ${para} 자료형은? ${typeof para}`)
-        document.write(`<hr> num1:${num1} num2:${num2} sum: ${sum} 자료형은? ${typeof sum}`)
-
-
-        //boolean
-
-        let fact = true;
-        let lie = false;
-        console.log(typeof fact);
-
-        //null
-        let temp = null;
-        console.log('temp:' + temp + typeof temp);
-
-        //undefined
-        let noName;
-        console.log('noName: ', noName, typeof noName);
-    </script>
+  <script>
+    const currentYear = 2023;
+    var birthYear;
+    var age;
+    birthYear = prompt('태어난 연도를 입력하세요.(YYYY)', '')
+    age = currentYear - birthYear;
+    document.write(`${currentYear}년 현재 ${birthYear} 년에 출생한 사람의 나이는 ${age} 세 입니다`)
+  </script>
 </body>
 
 </html>

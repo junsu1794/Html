@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Array 인스턴스를 사용한 배열선언-초깃값 없는거
+        let num1 = new Array(); //배열의 크기지정 안함
+        let num2 = new Array(4); //배열 크기지정(length:4)
+        console.log('num1', num1);
+        console.log('num2', num2);
+        //초깃값 있는거
+        let num3 = [1, 2, 3, 4, 5];
+        let num4 = Array(1, 2, 3, 4, 5);
+        console.log('num3', num3);
+        console.log('num4', num4);
+        //배열생성후 요소 표시하기
+        //반복문
+        let nums = ['one', 'two', 'three', 'four'];
+        for (let i = 0; i < nums.length; i++) {
+            console.log(i);
+            document.write(`<p>${nums[i]}</p>`)
+        }
+    </script>
+</body>
+
+</html>

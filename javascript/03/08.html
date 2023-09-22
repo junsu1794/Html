@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>매개변수의 기본값 지정하기</h1>
+  <script>
+    function multiple(a, b = 5, c = 10) {
+      return a * b + c;//30*5+10
+    }
+    const result1 = multiple(5, 10, 20);
+    //document 에 result1 의 결과를 출력해보세여
+    document.write(result1)
+    document.write("<hr>")
+    const result2 = multiple(10,20)
+    document.write(result2)
+    document.write("<hr>")
+    const result3= multiple(30)
+    document.write(result3)
+
+  </script>
+</body>
+
+</html>

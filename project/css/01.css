@@ -1,0 +1,25 @@
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+header ul {
+    display: inline;
+    font: 1em sans-serif;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+header ul a {
+    color: white;
+}
+
+#wrap {
+    text-align: center;
+    font-size: 2em;
+}

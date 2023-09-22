@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>객체의 생성</h1>
+  <script>
+    let dog = new Array();//배열을 만드는 객체
+    let cat = new Object();//객체를 만드는 객체
+    console.log(dog);
+    console.log(cat);
+    dog = ['모니', '10kg', '8']
+    cat = {
+      //key:value => 속성(property)
+      name: '모찌',
+      weight: '3kg',
+      age: '0'
+    }
+    document.write(`<h1>${cat.name}</h1>`)
+    document.write(`<h1>${dog[0]}</h1>`)
+  </script>
+  <script>
+    /* 리터럴 : 프로그래밍 언어에서 약속한 특수문자 */
+    const dev = {
+      name: "김망고", //property
+      skill: ['javascript', 'html', 'css']
+    }
+    console.log(dev);
+    document.write(`<h1>${dev.skill[0]}</h1>`)
+  </script>
+  <script>
+    /* this 는 키워드 : 객체 내에서의 this는 객체자신 */
+    const moni = {
+      name: '모니',
+      eat: function (food) {
+        alert(`${this.name}는 ${food} 먹어요`)
+      }
+    }
+    moni.eat("츄르")
+  </script>
+</body>
+
+</html>

@@ -2,25 +2,33 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>시험점수계산기</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <script>
-        const x = 75;
-        const y = 87;
-        const add = x + y;
-        document.write('국어점수:' + x + '<br>');
-        document.write('수학점수:' + y + '<br>');
-        document.write('합계:' + add + '<br>');
-        document.write('평균:' + add * 2 + '<br>');
-        /* string / number = number */ 
-        /* string * number = number */ 
-        /* string + number = string */ 
-        /* string - number = string */ 
-    </script>
+  <h1>산술연산자</h1>
+  <script>
+    console.log(100 + 200); // 덧셈
+    console.log(200 - 80); // 뺄셈
+    console.log(100 * 3); // 곱셈
+    console.log(400 / 5); // 나눗셈
+    console.log(402 % 5); // 나머지 2
+    console.log(2 ** 3); // 제곱
+
+    var t1 = "";  //s
+    var t2 = 5; //n
+    var t3 = '살';//s
+    var t6 = true;//b
+    var t4 = t1 + t2; //s+n=s
+    //t4 = t2 + t2; //n+n=n
+    //t4 = t1 + t3;//s+s=s
+    t4 = t1 + t6;//s+b=?
+    //String(),Number()
+    document.write(`<h1>${t4}-${typeof t4}</h1>`)
+
+  </script>
 </body>
 
 </html>

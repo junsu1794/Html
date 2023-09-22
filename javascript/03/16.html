@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./16.css">
+</head>
+
+<body>
+  <ul>
+    <li><a href="#" onclick="changeBg('green','yellow')">Green</a></li>
+    <li><a href="#" onclick="changeBg('orange','blue')">Orange</a></li>
+    <li><a href="#" onclick="changeBg('purple','white')">Purple</a></li>
+  </ul>
+  <script>
+
+    //changeBg 함수선언
+    function changeBg(color1, color2) {
+      const body = document.querySelector('body');
+      body.style.backgroundColor = color1;
+      body.querySelector('a').style.color = color2;
+    }
+  </script>
+</body>
+
+</html>

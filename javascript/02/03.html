@@ -2,34 +2,42 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>참조형</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>원시형</title>
 </head>
 
 <body>
-    <script>
-        //Object 객체
-        let person = {
-            name: 'mimi',
-            age: 20,
-            city: 'seoul',
-        }
-        console.log(person.name);
-        console.log(person.age);
-        // Array 배열
-        let zoo = ['koala','cat','🐶'];
-        console.log(zoo, typeof zoo);
-        console.log(zoo[0]);
-        console.log(zoo[2]);
-        document.write(`<h1 style="font-size:500px;">${zoo[2]}</h1>`);
+  <h1>원시형</h1>
+  <script>
+    //number
+    let num1 = 1;
+    //num1 식별자를 선언후 숫자1을 할당함
+    //변수 num1을 1로 초기화 함
+    let num2 = 2;
+    let sum = num1 + num2;
+    console.log(`sum: ${sum} 자료형은? ${typeof sum}`);
 
-        //function 함수
-        function addNums(num1, num2) {
-            return num1 + num2;
-        }
-        console.log(addNums(5,10));
-    </script>
+    //string
+    let str1 = '1';
+    let str2 = '2';
+    let para = str1 + str2;
+    document.write(`str1:${str1} str2:${str2} para: ${para} 자료형은? ${typeof para}`)
+    document.write(`<hr>num1:${num1} num2:${num2} sum: ${sum} 자료형은? ${typeof sum}`)
+
+    //boolean
+    let fact = true;
+    let lie = false;
+    console.log(typeof fact);
+
+    //null
+    let temp = null;
+    console.log('temp:' + temp + typeof temp);
+
+    //undefined
+    let noName;
+    console.log('noName: ', noName, typeof noName);
+  </script>
 </body>
 
 </html>

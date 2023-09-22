@@ -2,33 +2,33 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>산술연산자</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>참조형</title>
 </head>
 
 <body>
-    <h1>산술연산자</h1>
-    <script>
-        console.log(100 + 200); // 덧셈
-        console.log(200 - 80); // 뺄셈
-        console.log(100 * 3); // 곱셈
-        console.log(400 / 5); // 나눗셈
-        console.log(402 % 5); // 나머지 2 
-        console.log(2 ** 3); //제곱
+  <script>
+    //Object 객체
+    let person = {
+      name: 'mimi',
+      age: 20,
+      city: 'seoul',
+    }
+    console.log(person.name);
+    console.log(person.age);
+    //Array 배열
+    let zoo = ['koala', 'cat', '🐶'];
+    console.log(zoo, typeof zoo);
+    console.log(zoo[0]);
+    document.write(`<h1 style="font-size:500px;">${zoo[2]}</h1>`)
 
-        // var t1 = "망고는"; //s
-        var t1 = ""; //s
-        var t2 = 5; //number
-        var t3 = '살'; //s
-        var t6 = true; //b
-        var t4 = t1 + t2; // s+n=s
-        //t4 = t2 + t2; // n+n=n
-        //t4 = t1 + t3; //s+s=s
-        t4 = t1 + t6 // s+b=?
-        //String(),Number()
-        document.write(`<h1>${t4}-${typeof t4}</h1>`)
-    </script>
+    //function 함수
+    function addNums(num1, num2) {
+      return num1 + num2;
+    }
+    console.log(addNums(5,10));
+  </script>
 </body>
 
 </html>

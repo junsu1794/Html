@@ -2,23 +2,29 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <script>
-        let number = prompt('숫자를 입력해주세요');
-        console.log(number);
-        if (number !== null) {
-            if (number % 3 === 0) { alert('3의 배수입니다') }
-            else if (number % 3 !== 0){
-                alert('3의 배수 아님')
-            }
-        }
-        else { alert('취소되었음') }
-    </script>
+  <script>
+    const num = prompt('숫자입력');
+    console.log(num);
+    /* !true => false 면 true */
+    if (num !== null) {
+      if (num % 3 === 0) {
+        alert('3의 배수!')
+      }
+      else if (num % 3 !== 0) {
+        alert('3의 배수 아님!')
+      }
+    }
+    else {
+      alert('취소되었어!')
+    }
+
+  </script>
 </body>
 
 </html>

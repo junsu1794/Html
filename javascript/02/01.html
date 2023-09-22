@@ -2,20 +2,23 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나이계산하기</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수의 선언과 할당</title>
 </head>
 
 <body>
-    <script>
-        const currentYear = 2023;
-        var birthYear;
-        var age;
-        birthYear = prompt('태어난 연도를 입력하세요.(YYYY)', '')
-        age = currentYear - birthYear;
-        document.write(`${currentYear}년 현재 ${birthYear} 년에 출생한 사람의 나이는 ${age}세 입니다`)
-    </script>
+  <script>
+    /* 변수의 선언  */
+    var currentYear; //올해 연도의 변수 선언
+    var name; //이름의 변수 선언
+    var currentYear, name, age; // 한번에 선언
+    /* 선언후 할당=>초기화 */
+    var frontend;
+    frontend = '김망고';
+    /* 선언하면서 할당하기 */
+    var variable = '변수';
+  </script>
 </body>
 
 </html>

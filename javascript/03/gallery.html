@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="galleryWrap">
+    <h1>이미지넘기기</h1>
+    <p>
+      <a href="#" onclick="prevGallery();">◀</a>
+      <img src="./img/img1.jpg" alt="" id="gallery" width="300" height="200">
+      <a href="#" onclick="nextGallery();">▶</a>
+    </p>
+  </div>
+  <script>
+
+    let num = 1;
+    function nextGallery() {
+      num++;
+      if (num >= 8) { num = 1 }
+      document.getElementById('gallery').src = `./img/img${num}.jpg`
+    }
+
+    function prevGallery() {
+      num--;
+      //1(0)=1-1
+      if (num < 1) { num = 7 }//7
+      document.getElementById('gallery').src = `./img/img${num}.jpg`
+    }
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Course</title>
+</head>
+
+<body>
+    <h1>치킨 (리미와감자)</h1>
+    <ul>
+        <li id="one">I like 치킨 (치킨시켜)</li>
+        <li class="highlight">Everybody likes 치킨 (치킨시켜)</li>
+        <li>Let's eat 치킨 (치킨시켜)</li>
+    </ul>
+    <p class="highlight">양념 치킨 후라이드 치킨 치킨 치킨 (치킨시켜) (치킨시켜) x2 반은 양념 치킨 반은 후라이드 치킨 무는 많이 줘요 아줌마 부위는 날개는 세게 다리는 네게 목은 빼주세요
+        아줌마 고도비만 치킨 알이 꽉 찬 치킨 두 마리 같은 걸로 아줌마 구이는 날개는 미듐 가슴도 미듐 다린 웰던으로 아줌마</p>
+    <ul>
+        <li class="highlight">Edge 있게 물티슈, (아줌마)</li>
+        <li>콜란 서비스 (아줌마)</li>
+        <li id="two">할인카드... 되죠? (아줌마)</li>
+    </ul>
+    <script>
+        // cat.eat("츄르")
+        // cat.name
+        //console.log(document);
+        document.getElementById('one').style.background = 'yellow';
+        document.getElementById('two').style.background = 'yellow';
+        //클래스 명이 ()와 같은 elementnode 를 가져와
+        let el3 = document.getElementsByClassName('highlight');
+        console.log(el3);
+
+        for (let i = 0; i < el3.length; i++) {
+            el3[i].style.background = 'pink';
+            el3[0].style.background = 'red';
+        }
+        const el2 = document.getElementsByTagName('li');
+        el2[1].style.backgroundImage = 'url("http://qwerew.cafe24.com/images/icon/02.png")';
+        el2[1].style.backgroundSize = '24px';
+        el2[1].style.backgroundRepeat = 'no-repeat';
+        el2[1].style.paddingLeft = '24px';
+        /* (1개)querySelector,
+        (여러개)querySelectorAll */
+        const el4 = document.querySelector('.highlight');
+        el4.style.backgroundColor = "purple";
+        const el5 = document.querySelectorAll('.highlight');
+        console.log('el4', el4);
+        console.log('el5', el5);
+        //forEach((요소의값,요소번호)=>{})
+        el5.forEach((el, idx) => {
+            console.log(el5,el,idx );
+            el.style.color='orange';
+        })
+        /* el5.forEach((컵1,컵2)=>{
+            console.log(컵1,컵2);
+        }) */
+        
+    </script>
+</body>
+
+</html>

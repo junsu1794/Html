@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>2-익명함수:표현식함수</h1>
+  <script>
+    //sum(10,50)
+    const sum = function (a, b) {
+      return console.log(a + b);
+    }
+    sum(5, 8)
+  </script>
+  <h1>3-즉시실행함수: 딱 한번실행-선언과실행을 한번에</h1>
+  <script>
+    //매개변수 없는경우
+    /*
+    (function () {
+      let userName = prompt('이름이뭐니?');
+      document.write('안녕하세요!<span style="color:blue">' + userName + '</span>')
+    })()
+    */
+    //매개변수 있는경우
+    /*     (function (a, b) {
+          sum = a + b;
+        })(100, 200) */
+    document.write(`<h1>sum:실행결과${sum}</h1>`)
+  </script>
+  <h1>4.화살표함수,람다함수: 익명함수를 줄여쓰는방식</h1>
+  <script>
+    // const hi = () => {
+    //   return alert("안녕");
+    // }
+    const hi = () => alert("안녕");
+  </script>
+  <script>
+    //매개변수하나
+    let hihi = user => document.write(`${user}님 하이하이`)
+    hihi('🙀😹')
+  </script>
+  <script>
+    //매개변수여러개
+    let sumnam = (a, b) => document.write(`<h1>${a + b}</h1>`)
+    sumnam("🐱‍🐉", "🦧");
+  </script>
+</body>
+
+</html>

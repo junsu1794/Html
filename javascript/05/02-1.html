@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #four span {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <h1 id="header">textContent/innerText</h1>
+        <h2 id="gkdid">망고의 쇼핑목록</h2>
+        <ul>
+            <li id="one" class="hot">
+                <em>삑삑공</em>
+            </li>
+            <li id="two" class="hot">연어간식</li>
+            <li id="three" class="hot">치즈껌</li>
+            <li id="four"><span>😀😀😀😀😀</span></li>
+        </ul>
+        <div id="scriptResults"></div>
+    </div>
+    <script>
+        one.textContent = '모니';
+        gkdid.textContent = '우리반 고양이';
+        // document.querySelector('#one').textContent='모니';
+        // const text.querySelectorAll.textContent = ('모니','하양');
+        //document.querySelector('textContent').
+        /* 변수 text 선언 후 #one의 textContent 할당 */
+        let text = document.querySelector('#one').textContent;
+        console.log(text);
+        /* text 변수에 '하양이' 값을 추가할당 += */
+        text += '🍗하양이';
+        console.log(text);
+        /* text 변수에 '모찌' 값을 추가할당*/
+        text += '🍙모찌';
+        console.log(text);
+        /* #scriptResults 하위요소로 h3를 추가후 text 를 출력하세요 */
+        //  `글자 ${표현식}`
+        let h3 = `<h3>${text}</h3>`;
+        document.querySelector('#scriptResults').innerHTML = h3;
+    </script>
+</body>
+
+</html>

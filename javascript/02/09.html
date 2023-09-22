@@ -2,21 +2,27 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비교연산자</title>
 </head>
 
 <body>
-    <script>
-        /* 기능을 수행하는 명령어 */ 
-        const x = 7 > 6 && 1 > 8;
-        document.write(`x: ${x} <hr>`);
-        const y = 7 > 6 || 1 > 8;
-        document.write(`y: ${y} <hr>`);
-        const z = !(7 > 6); //
-        document.write(`z: ${z} <hr>`);
-    </script>
+  <script>
+    const x = 10;
+    const y = 20;
+    const z = '10';
+    //document.write(x + '>=' + y + ': ');
+    //document.write(x >= y);
+    //document.write('<br>');
+    document.write(`${x}>=${y}:${x >= y}<br>`)
+    document.write(`${x <= y}<br>`)//10 <= 20 (t)
+    document.write(`${x != y}<br>`)//10 != 20 (t)
+    document.write(`${x != z}<br>`)//10 != '10' (f)
+    document.write(`${x !== z}<br>`)//10 !== '10' (t)
+    document.write(`==같냐?${x == z}<br>`)//10 == '10' (t)
+    document.write(`===진짜같냐?${x === z}<br>`)//10 == '10' (f)
+  </script>
 </body>
 
 </html>

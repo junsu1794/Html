@@ -2,30 +2,36 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <script>
-        let x = 1;
-        document.write(`${x++}<br>`); // 1(2)
-        document.write(`${x++}<br>`); // 2(3)
-        document.write(`${x++}<br>`); // 3(4)
-        document.write(`${x++}<br>`); // 4(5)
-        x = 1;
-        document.write(`${++x}<br>`); //2
-        document.write(`${++x}<br>`); //3
-        document.write(`${++x}<br>`); //4
-    </script>
-    <script>
-        let number = 10;
-        alert(number++) // 10 (11)
-        alert(++number) // (12) 11=11+1
-        alert(number--) // 12(11)12=12-1
-        alert(--number) //10 11=11-1
-    </script>
+  <div id="container">
+    <p>첫번째 단락</p>
+  </div>
+  <script>
+    let val = 10;//++
+    val += 1; //val=val+1
+    document.write(val)
+  </script>
+  <script>
+    /* 복합대입연산자 */
+    const container = document.getElementById('container');
+    container.innerHTML += '<p class="para">두번째 단락</p>'
+  </script>
+  <script>
+    let list = '';
+    list += '<ul>';
+    list += '<li>Javascritp</li>';
+    list += '<li>Javascritp</li>';
+    list += '<li>Javascritp</li>';
+    list += '<li>Javascritp</li>';
+    list += '<li>Javascritp</li>';
+    list += '</ul>';
+    document.write(list)
+  </script>
 </body>
 
 </html>

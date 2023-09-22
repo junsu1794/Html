@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 매개변수가 없는 함수 */
+    function addNum() {
+      const sum = 2 + 3;
+      console.log("짠짠");
+      return sum;
+      console.log("보여?");
+    }
+    console.log(addNum());
+  </script>
+  <script>
+    document.write(`함수실행결과:${sum(2, 3)}\u00A0\u00A0\u00A0\u00A0\u00A0${sum(20, 30)}`)
+
+    /* (매개변수) */
+    function sum(a, b) {
+      return a + b;
+    }
+
+    //sum1(50,890)
+    //익명함수, 표현식
+    const sum1 = function (a, b) {
+      return a + b;
+    }
+    document.write("❤❤",sum1(50,890))
+  </script>
+</body>
+
+</html>

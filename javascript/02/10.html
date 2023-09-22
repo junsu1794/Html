@@ -2,19 +2,21 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <script>
-        const x = 20;
-        const y = 10;
-        birthYear = prompt('성별과 나이를 입력하세요')
-        document.write(`${x >= y}`);
-        document.write(`${y >= x}`);
-    </script>
+  <script>
+    /* 기능을 수행하는 명령어  */
+    const x = 7 > 6 && 1 > 8;
+    document.write(`x: ${x} <hr>`)
+    const y = 7 > 6 || 1 > 8;
+    document.write(`y: ${y} <hr>`)
+    const z = !(7 > 6);/* 청개구리 */
+    document.write(`z: ${z} <hr>`)
+  </script>
 </body>
 
 </html>

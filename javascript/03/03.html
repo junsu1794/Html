@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 호이스팅: 자바스크립트 엔진에서 변수나 함수 해석시의 끌어올림현상 */
+    /* 스코프: 변수나 함수 유효범위 */
+    /* var,function 함수는 호이스팅발생 */
+    /* 근데 왜써요 ? ie때문에 사용
+    */
+    var x;
+    function displayNumber() {
+      console.log('x is' + x);
+      console.log('y is' + y);
+      //var y = 20;
+      let y = 20;
+    }
+    displayNumber();
+
+  </script>
+</body>
+
+</html>

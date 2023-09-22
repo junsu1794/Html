@@ -2,28 +2,27 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <!--  
-        prompt를 성별과 나이를 확인하고
-        20대 여성이라면 결과값이 true
-        아니라면 결과 값으로 false
-    -->
-    <script>
-        // 성별확인
-        let gender = prompt('당신의 성별은?', '여성');
-        // 나이확인
-        let age = prompt('당신의 나이는?', '20');
-        // 조건비교
-        // age 20대 여성이냐? 20~29
-        let result = age == 20 && age <= 29 && gender == "여성";
-        // 결과출력
-        document.write(result);
-    </script>
+  <!--
+  prompt메서드를 성별과 나이를 확인
+  20대 여성 true
+  아니라면 false -->
+  <script>
+    //성별확인
+    let gender = prompt('당신의 성별은?', '여성');
+    //나이확인
+    let age = prompt('당신의 나이는?', '20');
+    //조건비교
+    //age 20대 여성이냐? 20~29
+    let result = age >= 20 && age <= 29 && gender == "여성"
+    //결과출력
+    document.write(result)
+  </script>
 </body>
 
 </html>

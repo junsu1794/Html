@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="console.log('html 속성으로 버튼눌렀징');">클릭</button>
+  <button class="pizza">🍕페퍼로니피자</button>
+  <button class="hamburger">🍔</button>
+  <script>
+    document.querySelector('.pizza').onclick=function(){console.log('🍕페퍼로니피자 dom 프로퍼티로 설정');}
+
+    document.querySelector('.hamburger').addEventListener('click',function(){
+      console.log('🍔 addEventListener 로 설정');
+    })
+  </script>
+</body>
+
+</html>
