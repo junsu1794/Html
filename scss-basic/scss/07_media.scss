@@ -1,0 +1,72 @@
+@import 'base/base';
+@import 'mixin/mixin';
+@import 'mixin/extend';
+
+$url: '../imahes/bg';
+
+$sm: '(max-width: 500px)';
+$md: '(min-width: 501px) and (max-width: 900px)';
+$lg: '(min-width: 901px)';
+
+//
+header {
+    @media #{$sm} {
+        @include fontSizeBgColor(20px, red);
+    }
+    @media #{$md} {
+        @include fontSizeBgColor(24px, blue);
+    }
+    @media #{$lg} {
+        @include fontSizeBgColor(24px, yellow);
+        @include flexDirectJustifyAlignGap(default,center,center,default);
+    }
+    nav ul{
+        @include  flexDirectJustifyAlignGap();
+        &>li{
+            $unit1:$col1 + ($gu1 * 2);
+            width: $unit1 * 2;
+            @media #{$sm} {
+                width: $unit1; //95
+            }
+        }
+        ul{
+            @include  flexDirectJustifyAlignGap(column);
+        }
+    }
+} 
+
+main{
+    @extend %padding;
+    .section1{
+        &-box{
+            @extend %boxshadow;
+            width: $col1 * 10; //650px
+            margin: auto;
+            @include flexDirectJustifyAlignGap();
+            @media #{$lg} {
+                width: $col1 * 7;
+                height: $unit1;
+                background: pink;
+            }
+            @media #{$md} {
+                width: $col1 * 5;
+                height: $unit1 * 3;
+            }
+            @media #{$sm} {
+                $col1: 100%; // 지역변수재정의
+                width: $col1;
+                line-height: 1.8;
+                @include flexDirectJustifyAlignGap(column,center, stretch, $gu1);
+
+            }
+        }
+        &-item{
+            @include flexDirectJustifyAlignGap(column);
+            @include fontSizeBgColor(2rem,#d8d8d8,$color-red);
+            @extend %padding;
+            span:nth-child(1){
+                color: $color-red;
+            }
+        }
+    }
+}

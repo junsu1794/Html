@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>Inner HTML</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div id="page">
+        <h1 id="header">innerHTML</h1>
+        <h2>요소내 HTML 태그를 취득하거나 조작시 사용되는 속성</h2>
+        <ul>
+            <li id="one" class="hot">떡볶이</li>
+            <li id="two" class="hot">순대</li>
+            <li id="three" class="hot">간짜장</li>
+            <li id="four">물만두</li>
+        </ul>
+        <div class="a">부모
+            <div class="b">자식</div>
+        </div>
+    </div>
+    <script>
+        const firstItem = document.querySelector('#one');
+        const item = firstItem.innerHTML;
+        console.log(item);
+        firstItem.innerHTML = `<a href="http://naver.com">${item}</a>`
+        const div = document.querySelector('.a');
+        const divContent = div.innerHTML;
+        console.log(divContent);
+        div.innerHTML = `<a href="http://naver.com">${divContent}</a>`
+    </script>
+</body>
+
+</html>

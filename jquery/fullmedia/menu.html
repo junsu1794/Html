@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        nav>ul {
+            justify-content: center;
+            display: flex;
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        nav>ul a {
+            display: block;
+            padding: 10px;
+        }
+
+        nav>ul {
+            background-color: yellow;
+        }
+
+        nav ul.sub {
+            background-color: pink;
+            display: none;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        .bg {
+            height: 0;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            position: absolute;
+            background-color: pink;
+        }
+    </style>
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <!-- <script>
+        $(() => {
+            $('.bg').css('transition', 'all 0.5s')
+            $('nav>ul>li').on({
+                mouseenter: function () {
+                    console.log($('.sub').innerHeight());
+                    $('.bg').height($('.sub').innerHeight())
+                    $('.sub').css('display', 'block');
+                },
+                mouseleave: function () { }
+            })
+        })
+    </script> -->
+    <script>
+        $(() => {
+            $('nav>ul>li').on({
+                mouseenter: function () {
+                    $('.bg').height($('.sub').innerHeight() + $('nav').innerHeight());
+                    $('.sub').slideDown();
+                    $('nav>ul').css('background', 'pink')
+                },
+                mouseleave: function () {
+                    $('.bg').height(0);
+                    $('.sub').slideUp();
+                    $('nav>ul').css('background', 'yellow')
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">menu1</a>
+                <ul class="sub">
+                    <li><a href="#">menu2-1</a></li>
+                    <li><a href="#">menu2-1</a></li>
+                    <li><a href="#">menu2-1</a></li>
+                    <li><a href="#">menu2-1</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu1</a>
+                <ul class="sub">
+                    <li><a href="#">menu2-1</a></li>
+                    <li><a href="#">menu2-1</a></li>
+                    <li><a href="#">menu2-1</a></li>
+                    <li><a href="#">menu2-1</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu1</a>
+                <ul class="sub">
+                    <li><a href="#">menu2-1</a></li>
+                    <li><a href="#">menu2-1</a></li>
+                    <li><a href="#">menu2-1</a></li>
+                    <li><a href="#">menu2-1</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="bg"></div>
+    </nav>
+</body>
+
+</html>

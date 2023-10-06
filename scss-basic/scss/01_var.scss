@@ -1,0 +1,17 @@
+$bg-color: rgb(85, 255, 0);
+$color-red: #ff0000;
+$width100: 50px;
+$per20: 20%;
+
+body {
+	background-color: $bg-color;
+}
+
+header ul li {
+	width: $width100 * 3;
+	font-size: calc($width100 - 50px);
+}
+
+.section1-box > .section1-item > .section1-para {
+	color: $color-red;
+}

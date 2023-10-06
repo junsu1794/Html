@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stickyHeader</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .wrap {
+            background-color: rgb(240, 240, 240);
+            min-width: 960px;
+        }
+
+        .dummy {
+            max-width: 500px;
+            margin: auto;
+            padding: 100px 0;
+        }
+
+        .page-header>.inner {
+            width: 100%;
+            max-width: 960px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+        }
+
+        .primary-nav {
+            line-height: 65px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .primary-nav ul {
+            display: flex;
+        }
+
+        .primary-nav ul a {
+            display: block;
+            padding: 0 1.36em;
+        }
+
+        .primary-nav ul a:hover {
+            background-color: #dbfbfb;
+        }
+
+        .page-header {
+            position: absolute;
+            top: 0;
+            background: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(0px);
+            height: 70px;
+            width: 100%;
+            min-width: 960px;
+            /* filter: drop-shadow(1px 2px 3px black) blur(1px); */
+            box-shadow: 0 2px 3px rgba(0, 0, 0, .25);
+        }
+
+        /* sticky */
+        .page-header.sticky {
+            position: fixed;
+            top: 0;
+            background: rgba(255, 255, 255, .1);
+            backdrop-filter: blur(10px);
+        }
+        .top{
+            width: 48px;
+            height: 48px;
+            position: fixed;
+            bottom: 48px;
+            right: 48px;
+            background: black;
+            color: white;
+            text-align: center;
+            line-height: 48px;
+            user-select: none;
+            cursor: pointer;
+        }
+    </style>
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script>
+        $(() => {
+            const header = $('.page-header');
+            const headerOST = header.offset().top + 100;
+            const win = $(window);
+            const topBTN = $('.top')
+            /* scroll_Event_Fn*/ 
+            win.scroll(() => {
+                let winSCT = $(this).scrollTop();
+                if (winSCT > headerOST) {
+                    header.addClass('sticky');
+                } else {
+                    header.removeClass('sticky');
+                }
+            })
+            /* scroll_Event_Fn*/
+            topBTN.on('click',function(){
+                $('html,body').animate({scrollTop:0},500)
+            })
+        }); // readyFn
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="page-header">
+            <div class="inner">
+                <h1 class="logo"><a href="#">Logo</a></h1>
+                <nav class="primary-nav">
+                    <ul>
+                        <li><a href="#">menu1</a></li>
+                        <li><a href="#">menu2</a></li>
+                        <li><a href="#">menu3</a></li>
+                        <li><a href="#">menu4</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="dummy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta
+            a accusantium, reiciendis aliquam natus placeat, iure, exercitationem quae necessitatibus minima laborum.
+            Rem ab quasi praesentium quia maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+            veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure, exercitationem quae
+            necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure,
+            exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis
+            aliquam natus placeat, iure, exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium
+            quia maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta a
+            accusantium, reiciendis aliquam natus placeat, iure, exercitationem quae necessitatibus minima laborum. Rem
+            ab quasi praesentium quia maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+            veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure, exercitationem quae
+            necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure,
+            exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis
+            aliquam natus placeat, iure, exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium
+            quia maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta a
+            accusantium, reiciendis aliquam natus plLorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+            veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure, exercitationem quae
+            necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure,
+            exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis
+            aliquam natus placeat, iure, exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium
+            quia maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta a
+            accusantium, reiciendis aliquam natus placeat, iure, exercitationem quae necessitatibus minima laborum. Rem
+            ab quasi praesentium quia maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+            veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure, exercitationem quae
+            necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure,
+            exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis
+            aliquam natus placeat, iure, exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium
+            quia maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta a
+            accusantium, reiciendis aliquam natus placeat, iure, exercitationem quae necessitatibus minima laborum. Rem
+            ab quasi praesentium quia maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+            veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure, exercitationem quae
+            necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure,
+            exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis
+            aliquam natus placeat, iure, exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium
+            quia maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta a
+            accusantium, reiciendis aliquam natus placeat, iure, exercitationem quae necessitatibus minima laborum. Rem
+            ab quasi praesentium quia maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+            veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure, exercitationem quae
+            necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure,
+            exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis
+            aliquam natus placeat, iure, exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium
+            quia maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta a
+            accusantium, reiciendis aliquam natus placeat, iure, exercitationem quae necessitatibus minima laborum. Rem
+            ab quasi praesentium quia maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+            veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure, exercitationem quae
+            necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure,
+            exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis
+            aliquam natus placeat, iure, exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium
+            quia maiores.aceat, iure, exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium quia
+            maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta a
+            accusantium, reiciendis aliquam natus placeat, iure, exercitationem quae necessitatibus minima laborum. Rem
+            ab quasi praesentium quia maiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+            veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure, exercitationem quae
+            necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis aliquam natus placeat, iure,
+            exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium quia maiores.Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Possimus veritatis provident soluta a accusantium, reiciendis
+            aliquam natus placeat, iure, exercitationem quae necessitatibus minima laborum. Rem ab quasi praesentium
+            quia maiores.</div>
+            <div class="top">top</div>
+    </div>
+</body>
+
+</html>

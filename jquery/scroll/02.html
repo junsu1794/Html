@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            margin: 200px 0 0 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Hello</p>
+    <p>2nd Paragraph</p>
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script>
+        const p = $('p:last');
+        let offset = p.offset();
+        console.log(offset);
+        console.log(offset.left);
+        console.log(offset.top);
+    </script>
+</body>
+
+</html>

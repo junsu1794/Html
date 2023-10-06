@@ -1,0 +1,48 @@
+/*
+  모듈: 연관성 있는 프로그램을 묶은거 (최소단위로 저장)
+  mixin-같은속성에 다른값
+    .h4{color:red,blue; font-size:15px, 25px}
+  extend-완전똑같은거 계속씀
+    font-family:'noto-sans'...
+    font-family:'arial'...
+*/
+/* mixin 기본문법
+@mixin 이름(매개변수) //선언
+@include 이름(인수) //호출
+*/
+
+@import url(./reset.css);
+
+@mixin fsBgCo($fontSize: 16px, $backgroudColor: #e3d08c, $color: #480aba) {
+	font-size: $fontSize;
+	background-color: $backgroudColor;
+	color: $color;
+}
+@mixin flexDirectJustiAlign($direct: row, $justi: space-between, $align: center) {
+	display: flex;
+	flex-direction: $direct;
+	justify-content: $justi;
+	align-items: $align;
+}
+
+@mixin hover($color, $deco: none) {
+	color: $color;
+	text-decoration: $deco;
+}
+
+header {
+	@include flexDirectJustiAlign();
+	@include fsBgCo(24px, yellow, red);
+	a {
+		@include fsBgCo(inherit, default, red);
+	}
+}
+
+main{
+  h2:hover{
+    @include hover(red,underline )
+  }
+  span:hover{
+    @include hover(green,overline)
+  }
+}

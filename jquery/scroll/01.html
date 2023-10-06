@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            margin: 10px;
+            padding: 5px;
+            border: 2px solid;
+            height: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>스크롤 양 얻기</h1>
+    <p>hello</p>
+    <p></p>
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script>
+        $(window).scroll(function(){
+            let winSCT= $(window).scrollTop();
+            $('p:last').text('scrollTop'+$(window).scrollTop())
+            if(winSCT > 200){
+                $('p:last').css('background','red')
+            }
+            if(winSCT > 400){
+                $('p:last').css('color','blue')
+            }
+        });
+    </script>
+</body>
+
+</html>

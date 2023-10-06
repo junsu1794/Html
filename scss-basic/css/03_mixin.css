@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/*
+  모듈: 연관성 있는 프로그램을 묶은거 (최소단위로 저장)
+  mixin-같은속성에 다른값
+    .h4{color:red,blue; font-size:15px, 25px}
+  extend-완전똑같은거 계속씀
+    font-family:'noto-sans'...
+    font-family:'arial'...
+*/
+/* mixin 기본문법
+@mixin 이름(매개변수) //선언
+@include 이름(인수) //호출
+*/
+@import url(./reset.css);
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  background-color: yellow;
+  color: red;
+}
+header a {
+  font-size: inherit;
+  background-color: default;
+  color: red;
+}
+
+main h2:hover {
+  color: red;
+  text-decoration: underline;
+}
+main span:hover {
+  color: green;
+  text-decoration: overline;
+}/*# sourceMappingURL=03_mixin.css.map */

@@ -1,0 +1,107 @@
+@import url(./reset.css);
+main .section1-box {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+main .section1-item, main {
+  padding-top: 2vw;
+  padding-right: 4vw;
+  padding-bottom: 2vw;
+  padding-left: 4vw;
+}
+
+@media (max-width: 500px) {
+  header {
+    font-size: 20px;
+    background-color: red;
+    color: #ff0000;
+  }
+}
+@media (min-width: 501px) and (max-width: 900px) {
+  header {
+    font-size: 24px;
+    background-color: blue;
+    color: #ff0000;
+  }
+}
+@media (min-width: 901px) {
+  header {
+    font-size: 24px;
+    background-color: yellow;
+    color: #ff0000;
+    display: flex;
+    flex-direction: default;
+    justify-content: center;
+    align-items: center;
+    gap: default;
+  }
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+header nav ul > li {
+  width: 250px;
+}
+@media (max-width: 500px) {
+  header nav ul > li {
+    width: 125px;
+  }
+}
+header nav ul ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+main .section1-box {
+  width: 650px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+@media (min-width: 901px) {
+  main .section1-box {
+    width: 455px;
+    height: 95px;
+    background: pink;
+  }
+}
+@media (min-width: 501px) and (max-width: 900px) {
+  main .section1-box {
+    width: 325px;
+    height: 285px;
+  }
+}
+@media (max-width: 500px) {
+  main .section1-box {
+    width: 100%;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+  }
+}
+main .section1-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  font-size: 2rem;
+  background-color: #d8d8d8;
+  color: #ff0000;
+}
+main .section1-item span:nth-child(1) {
+  color: #ff0000;
+}/*# sourceMappingURL=07_media.css.map */

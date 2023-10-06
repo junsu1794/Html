@@ -1,0 +1,31 @@
+body {
+  color: #333;
+  background-color: #fff;
+}
+body a {
+  color: #333;
+}
+
+.dark-theme {
+  color: #fff;
+  background-color: #333;
+}
+.dark-theme a {
+  color: #fff;
+}
+
+.gray-theme {
+  color: #f00;
+  background-color: #aaa;
+}
+.gray-theme a {
+  color: #f00;
+}
+
+.light-theme {
+  color: #333;
+  background-color: #fff;
+}
+.light-theme a {
+  color: #333;
+}/*# sourceMappingURL=06_if.css.map */

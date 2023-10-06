@@ -1,0 +1,10 @@
+{
+     "jquery": {
+        "prefix": "jq",
+        "body": []
+},
+    "arrow": {
+        "prefix": "arr",
+        "body":["()=>{","$1return","}"]
+    }
+}

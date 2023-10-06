@@ -1,0 +1,1 @@
+@import"./reset.css";@import"./03_mixin.css";header{box-shadow:0 0 4px rgba(0,0,0,.5)}header{padding:2vw 4vw}header a{color:blue}header h1>a:hover{color:pink}header nav>ul{display:flex}header nav>ul li:hover>ul{display:block}header nav>ul ul{display:none}/*# sourceMappingURL=04_extend.min.css.map */

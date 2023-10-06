@@ -1,0 +1,1 @@
+@import"./reset.css";header{display:flex;flex-direction:row;justify-content:space-between;align-items:center;font-size:24px;background-color:#ff0;color:red}header a{font-size:inherit;background-color:default;color:red}main h2:hover{color:red;text-decoration:underline}main span:hover{color:green;text-decoration:overline}/*# sourceMappingURL=03_mixin.min.css.map */

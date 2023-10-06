@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>00_basic</title>
+  <!-- <link rel="stylesheet" href="css/00_basic.css" /> -->
+  <!-- <link rel="stylesheet" href="css/01_var.css"> -->
+  <!-- <link rel="stylesheet" href="css/02_nesting.css"> -->
+  <!-- <link rel="stylesheet" href="css/03_mixin.css"> -->
+  <!-- <link rel="stylesheet" href="04_extend.css"> -->
+  <!-- <link rel="stylesheet" href="./css/05_partial.css"> -->
+  <!-- <link rel="stylesheet" href="css/06_if.css"> -->
+  <link rel="stylesheet" href="css/07_media.css">
+  <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+  <script src="theme.js" defer></script>
+  <style>
+    option:selected {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <form action="#">
+      <select name="theme" id="theme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="gray">Gray</option>
+      </select>
+    </form>
+    <h1 id="logo"><a href="#">logo</a></h1>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">menu1</a>
+          <ul>
+            <li><a href="#">menu2-1</a></li>
+            <li><a href="#">menu2-1</a></li>
+            <li><a href="#">menu2-1</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu2</a>
+          <ul>
+            <li><a href="#">menu2-2</a></li>
+            <li><a href="#">menu2-2</a></li>
+            <li><a href="#">menu2-2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu3</a>
+          <ul>
+            <li><a href="#">menu2-3</a></li>
+            <li><a href="#">menu2-3</a></li>
+            <li><a href="#">menu2-3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <button><a href="#">login</a></button>
+  </header>
+  <main>
+    <section class="section1">
+      <h2>section1</h2>
+      <div class="section1-box">
+        <div class="section1-item">
+          <span class="section1-title">title</span>
+          <span class="section1-para">paragraph</span>
+        </div>
+        <div class="section1-item"> <span class="section1-title">title</span>
+          <span class="section1-para">paragraph</span>
+        </div>
+        <div class="section1-item"> <span class="section1-title">title</span>
+          <span class="section1-para">paragraph</span>
+        </div>
+    </section>
+  </main>
+</body>
+
+</html>

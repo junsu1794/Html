@@ -1,0 +1,72 @@
+@import 'base/base';
+@import 'mixin/mixin';
+@import 'mixin/extend';
+
+body {
+    background-color: $bg-color;
+}
+
+header {
+    @include flexDirectJustifyAlignGap(default, space-between, default, default);
+
+    a {
+        @include fontSizeBgColor();
+
+        &:hover {
+            @include hover(black, yellow);
+        }
+    }
+
+    h1 {
+        a {
+            &:hover {
+                @include hover(pink)
+            }
+        }
+    }
+
+    nav ul {
+        @include flexDirectJustifyAlignGap(row, space-between, center, inherit);
+
+        &>li {
+            width: $col1;
+
+            ul {
+                @include flexDirectJustifyAlignGap(column, center, center, inherit);
+            }
+        }
+    }
+}
+
+main {
+    @extend %padding;
+
+    .section1 {
+
+        //.section1
+        & {
+            @extend %padding;
+            @extend %boxshadow;
+        }
+
+        //.section1-box
+        &-box {
+            @extend %boxshadow;
+            width: $unit1 * 10;
+            margin: auto;
+            @include flexDirectJustifyAlignGap();
+        }
+
+        //.section1-item
+        &-item {
+            flex: 1 1 0;
+            @include flexDirectJustifyAlignGap(column);
+            @include fontSizeBgColor(2rem,#d8d8d8,inherit);
+            @extend %padding;
+            span:nth-child(1){
+                color: $color-red;
+            
+            }
+        }
+    }
+}

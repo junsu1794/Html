@@ -1,0 +1,12 @@
+body {
+  background-color: rgb(85, 255, 0);
+}
+
+header ul li {
+  width: 150px;
+  font-size: 0px;
+}
+
+.section1-box > .section1-item > .section1-para {
+  color: #ff0000;
+}/*# sourceMappingURL=01_var.css.map */
