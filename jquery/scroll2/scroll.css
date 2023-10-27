@@ -1,0 +1,280 @@
+.section1 {
+    padding-top: 30vw;
+}
+
+.section1 .box {
+    display: inline-block;
+    width: clamp(100px, 30%, 100%);
+    height: 300px;
+    transition: all 2s;
+}
+
+.section1 .box1 {
+    transition-delay: 0s;
+    transform: translateX(-200%);
+}
+
+.section1 .box2 {
+    transition-delay: 3s;
+    transform: translateX(200%);
+}
+
+/* section2 */
+.section2 {
+    position: relative;
+}
+
+.section2 .gallery {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section2 .gallery .box {
+    position: absolute;
+    width: 15vw;
+    height: 200px;
+    top: 100%;
+    opacity: 0;
+}
+
+.section2 .bg3 {
+    left: 10%;
+}
+
+.section2 .bg4 {
+    left: 40%;
+}
+
+.section2 .bg5 {
+    right: 10%;
+}
+
+/* section3 */
+.section3 {
+    position: relative;
+    display: flex;
+    color: #333;
+    gap: 2rem;
+}
+
+.section3 .item {
+    padding-top: 10rem;
+}
+
+.section3 .item:nth-child(1) {
+    flex-basis: 60%;
+}
+
+.section3 .item:nth-child(2) {
+    flex-basis: 40%;
+    align-self: center;
+}
+
+.section3 figure {
+    position: relative;
+    box-shadow: -1rem 1rem 3rem -2rem rgba(0, 0, 0, 0.5);
+}
+
+.section3 figure::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: var(--bg1);
+    transition: clip-path 0.3s cubic-bezier(.87, 1.36, 1, .13);
+    content: '';
+    opacity: 0;
+    clip-path: inset(0 0 0 100%);
+}
+
+.section3 figure img {
+    width: 100%;
+    display: block;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.6s 0.3s cubic-bezier(.87, 1.36, 1, .13);
+}
+
+.section3 figure figcaption {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    padding: 20px;
+    font-weight: bold;
+    background-color: var(--bg1);
+    color: #fff;
+    mix-blend-mode: overlay;
+    clip-path: inset(0 0 0 100%);
+    transition: clip-path 0.3s 0.9s cubic-bezier(.87, 1.36, 1, .13);
+    ;
+}
+
+.section3.is-animated figure::before,
+.section3.is-animated figure img,
+.section3.is-animated figure figcaption {
+    clip-path: inset(0);
+}
+
+/* projects */
+.projects {
+    position: relative;
+}
+
+.projects .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    position: absolute;
+    top: 0;
+    height: 30vw;
+}
+
+.item.left {
+    width: 60vw;
+    transition: left 1s ease-in-out;
+    left: -100%;
+}
+
+.item.right {
+    width: 40vw;
+    right: 0;
+    background: var(--bg1);
+}
+
+.projects.is-animated .left {
+    left: 0;
+}
+
+/* pip */
+.left .mockup img,
+.left .mockup .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.left .mockup.pc {
+    margin-left: clamp(5%, 100px, 10%);
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+
+/* pc */
+.left .mockup.pc .mask {
+    z-index: 3;
+    width: 32.3vw;
+    height: 61.8%;
+    overflow: hidden;
+    top: 6%;
+    left: 5.2%;
+}
+
+.left .mockup.pc img.screen {
+    z-index: 1;
+    width: 100%;
+}
+
+.left .mockup.pc img.device {
+    z-index: 2;
+    width: 100%;
+}
+
+/* mobile */
+.left .mockup.mobile{
+    z-index: 99;
+    position: relative;
+    top: -76%;
+    left: 58%;
+    width: 20%;
+    height: 60%;
+}
+.left .mockup.mobile .mask{
+    z-index: 999;
+    width: 10.5vw;
+    height: 100%;
+    overflow: hidden;
+    top: 10.8%;
+    left: 7%;
+    border-radius: 16px 16px 0 0;
+}
+.left .mockup.mobile img.screen{
+    z-index: 3;
+    width: 100%;
+}
+.left .mockup.mobile img.device{
+    z-index: 4;
+    width: 100%;
+}
+
+
+/* skill */
+.charts{
+    width: 80%;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+}
+.charts .chart{
+    margin: 0 20px;
+    position: relative;
+}
+
+.charts .chart h2{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+
+.charts .chart svg{
+    width: 220px;
+    height: 220px;
+}
+
+.charts .chart svg circle{
+    fill: url(#bg1);
+    stroke-width: 20;
+    stroke-dasharray: 628;
+    stroke-dashoffset: 628;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.charts .chart:nth-child(1) svg circle,
+.charts .chart:nth-child(1) svg line{
+    stroke: #ffc114;
+}
+.charts .chart:nth-child(2) svg circle,
+.charts .chart:nth-child(2) svg line{
+    stroke: #ff4714;
+}
+.charts .chart:nth-child(3) svg circle,
+.charts .chart:nth-child(3) svg line{
+    stroke: #4714ff;
+}
+
+
+/*svg 바 */
+.section6 .charts{
+    flex-direction: column;
+}
+.section6 .charts .chart svg{
+    width: 500px;
+    height: 200px;
+}
+.section6 .charts .chart svg line{
+    fill: #ebebeb;
+    stroke-width: 30;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    transform-origin: 0% 0%;
+}
+

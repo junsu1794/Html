@@ -1,0 +1,21 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style-type: none;
+}
+body {
+	font: 12px/1.5 '굴림', Gulim;
+	margin: 10px;
+}
+h2 {
+	margin-top: 20px;
+}
+
+.box1,
+.box2,
+h2 + p + p {
+	overflow: hidden;
+	max-height: 40px;
+}

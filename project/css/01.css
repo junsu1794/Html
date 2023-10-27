@@ -1,25 +1,8 @@
-header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-}
+header {position: fixed;left: 0;right: 0;top: 0;background-color: rgba(0, 0, 0, 0.5);z-index: 100; }
+header ul {display: flex;justify-content: center;list-style: none;gap: 20px; }
+header ul a {color: white; }
+header ul li.active a{background-color: white; color:black;}
+#fp-nav.active span{background-color: white !important;}
+/* #fp-nav.active a{background-color: beige;} */
 
-header ul {
-    display: inline;
-    font: 1em sans-serif;
-    justify-content: center;
-    list-style: none;
-    gap: 20px;
-}
-
-header ul a {
-    color: white;
-}
-
-#wrap {
-    text-align: center;
-    font-size: 2em;
-}
+#wrap{text-align: center; font-size: 2em;}

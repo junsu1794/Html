@@ -1,0 +1,10 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 1"><defs><style>.line{fill:#ff0000;stroke:#ff00ff;stroke-width:5px; stroke-miterlimit:10;}</style></defs>
+<title>Untitled-1</title>
+<line class="line" y1="0.5" x2="128" y2="0.5"/>
+<script>
+document.querySelector('.line').addEventListener('click',function(){
+    this.style.stroke='#ff0000';
+})
+</script>
+
+</svg>

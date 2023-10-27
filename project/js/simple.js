@@ -1,3 +1,3 @@
 $(function () {
-    $('#wrap').fullpage();
+  $('#wrap').fullpage();
 })
