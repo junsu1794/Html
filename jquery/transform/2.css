@@ -1,0 +1,34 @@
+.transform_container {
+    width: 800px;
+    margin: 20px auto;
+}
+
+.origin {
+    width: 100px;
+    height: 100px;
+    margin: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    perspective: 1000px;
+    perspective-origin: 0% 0%;
+}
+
+.origin>div {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    transition: transform 3s;
+}
+
+.rotatex:hover {
+    transform: translateZ(200px) rotateX(55deg);
+}
+.rotatey:hover {
+    transform: translateZ(200px) rotateY(55deg);
+}
+.rotatez:hover {
+    transform: translateZ(200px) rotateZ(55deg);
+}
+.rotatexyz:hover {
+	transform: translateZ(200px) rotate3d(0,1.2,-1.5,55deg);
+}

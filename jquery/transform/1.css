@@ -1,0 +1,23 @@
+.transform_container {
+    width: 50%;
+    margin: 200px auto;
+    border: 1px solid;
+}
+
+.transform_container img {
+    width: 100%;
+    transition: all 0.35s;
+    transform: scaleZ(1);
+}
+
+.transform_container {
+    perspective: 1000px;
+    perspective-origin: 100% 50%;
+}
+
+.transform_container:hover img {
+    /* transform: scale(2); */
+    /* transform: translate3D(100px, 100px, 200px);
+    transform: translateZ(200px) scaleZ(5); */
+    transform: translateZ(200px) rotateZ(180deg);
+}
